@@ -1,0 +1,85 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 44px;
+    transition: opacity ease-in-out 0.3s;
+}
+
+.navbar_type_main-page {
+    justify-content: flex-end;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__close-menu-button {
+    opacity: 0;
+    visibility: hidden;
+    border: none;
+    background-color: transparent;
+    background-image: url(../../images/cross.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    right: 23px;
+    top: 23px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar_type_authorized {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        box-sizing: border-box;
+        width: 68%;
+        margin: 0;
+        padding-top: 160px;
+        z-index: 3;
+        background: #fff;
+        align-items: center;
+    }
+
+    .navbar_state_visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbar__menu_type_profile {
+        margin: auto 0 92px;
+    }
+
+    .navbar__menu_type_authorized {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar__close-menu-button {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar_type_authorized {
+        width: 100%;
+        padding-top: 144px;
+    }
+    
+    .navbar__close-menu-button {
+        top: 13px;
+        right: 13px;
+    }
+
+    .navbar__menu_type_profile {
+        margin-bottom: auto 0 48px;
+    }
+}
