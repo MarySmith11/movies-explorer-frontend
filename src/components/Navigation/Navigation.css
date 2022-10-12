@@ -19,7 +19,7 @@
     visibility: hidden;
     border: none;
     background-color: transparent;
-    background-image: url(../../images/cross.png);
+    background-image: url(../../images/cross.svg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 31px;
@@ -73,7 +73,7 @@
         width: 100%;
         padding-top: 144px;
     }
-    
+
     .navbar__close-menu-button {
         top: 13px;
         right: 13px;

@@ -46,6 +46,7 @@
     width: 90px;
     margin: 0 5px;
     padding: 21px 0 22px;
+    flex-shrink: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -66,11 +67,14 @@
     .techs__item {
         font-size: 12px;
         line-height: 15px;
+        margin-bottom: 10px;
     }
 
     .techs__list {
         margin: 83px 0 0;
         width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .techs__content {

@@ -62,7 +62,7 @@
     width: 21px;
     height: 21px;
     background-color: #ee3465;
-    background-image: url(../../images/check.png);
+    background-image: url(../../images/check.svg);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -70,7 +70,7 @@
 .movies__button_type_remove {
     width: 21px;
     height: 21px;
-    background-image: url(../../images/delete.png);
+    background-image: url(../../images/delete.svg);
     background-repeat: no-repeat;
     background-position: center center;
 }
