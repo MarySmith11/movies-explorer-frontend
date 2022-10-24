@@ -1,4 +1,4 @@
-import portfolioPhoto from '../images/photo.png';
+import portfolioPhoto from '../images/photo.jpg';
 
 export const promoTitle = 'Учебный проект студента факультета Веб-разработки.';
 export const aboutTitle = 'О проекте';
@@ -59,111 +59,15 @@ export const portfolioContent = {
 
 export const aboutMeContent = {
   title: 'Студент',
-  name: 'Виталий',
-  activity: 'Фронтенд-разработчик, 30 лет',
+  name: 'Мария',
+  activity: 'Фронтенд-разработчик, 24 года',
   photo: portfolioPhoto,
-  description: 'Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ Контур». После того, как прошёл курс по веб- разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.',
+  description: 'Я родилась в Барнауле, но живу в Новосибирске уже 5 лет, закончила факультет экономики РАНХиГС. У меня есть муж. Я люблю заниматься творческой деятельностью и активным видом спорта. С 2017 года работала в компании «МСС» бухгалтером. Недавно начала кодить. В портфолио уже имеется коммерческий проект.',
   link: {
     title: 'Github',
     href: 'https://github.com',
   },
 };
-
-export const movieCardList = [
-  {
-    title: 'Бег это свобода',
-    time: '1ч 17м',
-    picture: 'https://i.ytimg.com/vi/aMKSdLp_IlE/maxresdefault.jpg',
-    saved: true,
-  },
-  {
-    title: 'Бег это свобода',
-    time: '1ч 17м',
-    picture: 'https://i.ytimg.com/vi/aMKSdLp_IlE/maxresdefault.jpg',
-    saved: true,
-  },
-  {
-    title: 'Бег это свобода',
-    time: '1ч 17м',
-    picture: 'https://i.ytimg.com/vi/aMKSdLp_IlE/maxresdefault.jpg',
-    saved: true,
-  },
-  {
-    title: 'Бег это свобода',
-    time: '1ч 17м',
-    picture: 'https://i.ytimg.com/vi/aMKSdLp_IlE/maxresdefault.jpg',
-    saved: true,
-  },
-  {
-    title: 'Соберись перед прыжком',
-    time: '1ч 17м',
-    picture: 'https://images.justwatch.com/backdrop/138397118/s1440/soberis-pered-pryzhkom',
-    saved: true,
-  },
-  {
-    title: 'Соберись перед прыжком',
-    time: '1ч 17м',
-    picture: 'https://images.justwatch.com/backdrop/138397118/s1440/soberis-pered-pryzhkom',
-    saved: true,
-  },
-  {
-    title: 'Соберись перед прыжком',
-    time: '1ч 17м',
-    picture: 'https://images.justwatch.com/backdrop/138397118/s1440/soberis-pered-pryzhkom',
-    saved: true,
-  },
-  {
-    title: 'Соберись перед прыжком',
-    time: '1ч 17м',
-    picture: 'https://images.justwatch.com/backdrop/138397118/s1440/soberis-pered-pryzhkom',
-    saved: true,
-  },
-  {
-    title: 'Дженис: Маленькая девочка грустит',
-    time: '30м',
-    picture: 'https://images.kinorium.com/movie/shot/1505039/w1500_37221202.jpg',
-    saved: true,
-  },
-  {
-    title: 'Дженис: Маленькая девочка грустит',
-    time: '1ч 17м',
-    picture: 'https://images.kinorium.com/movie/shot/1505039/w1500_37221202.jpg',
-    saved: true,
-  },
-  {
-    title: 'Дженис: Маленькая девочка грустит',
-    time: '1ч 17м',
-    picture: 'https://images.kinorium.com/movie/shot/1505039/w1500_37221202.jpg',
-    saved: true,
-  },
-  {
-    title: 'Дженис: Маленькая девочка грустит',
-    time: '1ч 17м',
-    picture: 'https://images.kinorium.com/movie/shot/1505039/w1500_37221202.jpg',
-    saved: true,
-  },
-];
-
-export const savedMovies = [
-  {
-    title: 'Бег это свобода',
-    time: '30м',
-    picture: 'https://i.ytimg.com/vi/aMKSdLp_IlE/maxresdefault.jpg',
-    saved: false,
-  },
-  {
-    title: 'Соберись перед прыжком',
-    time: '1ч 17м',
-    picture: 'https://images.justwatch.com/backdrop/138397118/s1440/soberis-pered-pryzhkom',
-    saved: true,
-  },
-  {
-    title: 'Дженис: Маленькая девочка грустит',
-    time: '1ч 17м',
-    picture: 'https://images.kinorium.com/movie/shot/1505039/w1500_37221202.jpg',
-    saved: false,
-  },
-];
 
 export const footerContent = {
   description: 'Учебный проект Яндекс.Практикум х BeatFilm.',

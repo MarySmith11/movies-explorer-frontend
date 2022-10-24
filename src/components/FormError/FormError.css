@@ -2,12 +2,19 @@
     font-weight: normal;
     font-size: 11px;
     line-height: 13px;
-    color: #EE3465;
+    color: #FF004C;
     min-height: 14px;
-    margin: 6px 0 0;
+    margin: 6px 0 20px;
 }
 
 .form-error_type_auth {
     font-size: 10px;
     line-height: 12px;
+}
+
+.form-error_state_hidden{
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  line-height: 0;
 }
