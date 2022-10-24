@@ -10,7 +10,7 @@ export const FOOTER_FULL_PATH_LIST = [
   '/movies',
   '/saved-movies',
 ];
-export const MAIN_API_BASE_URL = 'http://localhost:5000';
+export const MAIN_API_BASE_URL = 'https://api.marydiploma.nomoredomains.icu';
 export const FILMS_IMAGES_DOMAIN = 'https://api.nomoreparties.co';
 export const FILMS_API_URL = 'https://api.nomoreparties.co/beatfilm-movies';
 export const REGISTER_ERRORS = {
