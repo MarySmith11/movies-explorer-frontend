@@ -34,7 +34,7 @@ function Movies(props) {
       })) || [];
       setFilms([...updatedSaveFlagFilms]);
     },
-    [makeRequest, savedFilms],
+    [makeRequest, savedFilms, films],
   );
 
   // сабмит формы фильтра
