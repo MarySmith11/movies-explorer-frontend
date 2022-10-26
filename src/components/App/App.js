@@ -20,7 +20,8 @@ import { HEADER_FULL_PATH_LIST, FOOTER_FULL_PATH_LIST, FILMS_IMAGES_DOMAIN } fro
 import * as mainApiMethods from '../../utils/MainApi';
 import getFilmList from '../../utils/MoviesApi';
 import FormatMovies from '../../utils/FormatMovies';
-import { addSavedFilmToStorage, removeSavedFilmFromStorage } from '../../utils/additionalData';
+import { addSavedFilmToStorage, removeSavedFilmFromStorage, removeAllFilmsFromStorage } from '../../utils/additionalData';
+import { removeFilterFromStorage } from '../../utils/filterUtils';
 import './App.css';
 
 function App() {
@@ -242,6 +243,8 @@ function App() {
     mainApiMethods.logout()
       .then((result) => {
         if (!result.error) {
+          removeFilterFromStorage();
+          removeAllFilmsFromStorage();
           history.push('/');
         }
       })

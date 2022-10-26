@@ -43,3 +43,7 @@ export function removeSavedFilmFromStorage(film, setState) {
     setState(newSavedFilms);
   }
 }
+
+export function removeAllFilmsFromStorage() {
+  localStorage.removeItem('saved-films');
+}

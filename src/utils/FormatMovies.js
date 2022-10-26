@@ -26,10 +26,10 @@ export default class FormatMovies {
       );
       if (this.lastFilteredResult.length) {
         return {
+          showPagination: pageElementCount && this.lastFilteredResult.length > pageElementCount,
           films: (pageElementCount && this.lastFilteredResult.length > pageElementCount)
             ? this.lastFilteredResult.splice(0, pageElementCount)
             : this.lastFilteredResult,
-          showPagination: pageElementCount && this.lastFilteredResult.length > pageElementCount,
         };
       }
     }

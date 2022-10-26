@@ -3,9 +3,17 @@ import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 import './SearchForm.css';
 
 function SearchForm(props) {
-  const [phrase, setPhrase] = React.useState('');
+  const [phrase, setPhrase] = React.useState(props.phrase || '');
   const [error, setError] = React.useState('');
-  const [isShort, setIsShort] = React.useState(false);
+  const [isShort, setIsShort] = React.useState(props.isShort || false);
+
+  React.useEffect(() => {
+    setIsShort(props.isShort || false);
+  }, [props.isShort]);
+
+  React.useEffect(() => {
+    setPhrase(props.phrase || '');
+  }, [props.phrase]);
 
   function handleSearch(e) {
     e.preventDefault();
@@ -41,7 +49,7 @@ function SearchForm(props) {
         </button>
       </div>
       <p className={`form-error ${error ? '' : 'form-error_state_hidden'}`}>{error}</p>
-      <FilterCheckbox onChange={shortFilmCheckboxHandler} />
+      <FilterCheckbox onChange={shortFilmCheckboxHandler} checked={isShort} />
     </form>
   );
 }

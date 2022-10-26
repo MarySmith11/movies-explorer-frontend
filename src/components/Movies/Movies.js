@@ -4,6 +4,7 @@ import SearchForm from '../SearchForm/SearchForm';
 import Preloader from '../Preloader/Preloader';
 import MoviesCardListPagination from '../MoviesCardListPagination/MoviesCardListPagination';
 import { predictPageElementCount } from '../../utils/additionalData';
+import { loadFilterFromStorage, saveFilterToStorage } from '../../utils/filterUtils';
 import './Movies.css';
 
 function Movies(props) {
@@ -13,6 +14,9 @@ function Movies(props) {
   const [loadMoreCount, setLoadMoreCount] = React.useState(0);
   const [pageCount, setPageCount] = React.useState(0);
   const [makeRequest, doMakeRequest] = React.useState(0);
+
+  const [searchString, setSearchString] = React.useState('');
+  const [isShortSearch, setIsShortSearch] = React.useState(false);
 
   React.useEffect(
     () => {
@@ -33,14 +37,6 @@ function Movies(props) {
     [makeRequest, savedFilms],
   );
 
-  React.useEffect(
-    () => {
-      props.onMount(setSavedFilms);
-      predictPageElementCount(setPageCount, setLoadMoreCount);
-    },
-    [],
-  );
-
   // сабмит формы фильтра
   function handleSearch(phraseFilter, isShortFilter) {
     if (!props.formatter.allFilms || props.formatter.allFilms.length <= 0) {
@@ -54,6 +50,10 @@ function Movies(props) {
               isShortFilter,
               pageCount,
             );
+            saveFilterToStorage({
+              phraseFilter,
+              isShortFilter,
+            });
             setFilms(formatterResult.films);
             setShowPagination(formatterResult.showPagination);
           } else {
@@ -67,11 +67,29 @@ function Movies(props) {
         isShortFilter,
         pageCount,
       );
+      saveFilterToStorage({
+        phraseFilter,
+        isShortFilter,
+      });
       setFilms(formatterResult.films);
       setShowPagination(formatterResult.showPagination);
       doMakeRequest();
     }
   }
+
+  React.useEffect(
+    () => {
+      predictPageElementCount(setPageCount, setLoadMoreCount);
+      const savedFilter = loadFilterFromStorage();
+      if (savedFilter && (savedFilter.phraseFilter || savedFilter.isShortFilter)) {
+        setSearchString(savedFilter.phraseFilter);
+        setIsShortSearch(savedFilter.isShortFilter);
+        handleSearch(savedFilter.phraseFilter, savedFilter.isShortFilter);
+      }
+      props.onMount(setSavedFilms);
+    },
+    [],
+  );
 
   // подгрузка карточек
   function loadMore() {
@@ -102,7 +120,7 @@ function Movies(props) {
 
   return (
     <section className='film-container'>
-      <SearchForm handleSearch={handleSearch} />
+      <SearchForm handleSearch={handleSearch} isShort={isShortSearch} phrase={searchString} />
       <MoviesCardList films={films} errorText={props.errorText}
         handleDelete={handleDelete} onFilmLike={handleLike} />
       <MoviesCardListPagination show={showPagination} onClick={loadMore}/>
