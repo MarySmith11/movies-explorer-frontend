@@ -1,10 +1,14 @@
 .navbar__menu-item {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 13px;
   line-height: 18px;
   text-decoration: none;
   color: #000;
   margin-right: 17px;
+}
+
+.navbar__menu-item_state_active {
+  font-weight: 500;
 }
 
 .navbar__menu-item_type_mobile {

@@ -1,11 +1,16 @@
 import React from 'react';
 import './FilterCheckbox.css';
 
-function FilterCheckbox() {
-  const [checked, setChecked] = React.useState(false);
+function FilterCheckbox(props) {
+  const [checked, setChecked] = React.useState(props.checked || false);
   const labelClass = checked ? 'filter-checkbox__label filter-checkbox__label_state_active' : 'filter-checkbox__label';
 
+  React.useEffect(() => {
+    setChecked(props.checked || false);
+  }, [props.checked]);
+
   function handleCheckboxChange(e) {
+    props.onChange(e.target.checked);
     setChecked(e.target.checked);
   }
 

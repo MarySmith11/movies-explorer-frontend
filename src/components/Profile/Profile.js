@@ -1,19 +1,16 @@
 import React from 'react';
 import ProfileEditForm from '../ProfileEditForm/ProfileEditForm';
+import ActiveUserContext from '../../user-contexts/CurrentUserContext';
 import './Profile.css';
 
-function Profile() {
-  const userName = 'Виталий';
-  const userEmail = 'pochta@yandex.ru';
-
-  const profileFormSubmitHandler = (e) => {
-    e.preventDefault();
-  };
+function Profile(props) {
+  const currentUser = React.useContext(ActiveUserContext);
 
   return (
     <main className='profile'>
-      <h1 className='profile__name'>{`Привет, ${userName}!`}</h1>
-      <ProfileEditForm name={userName} email={userEmail} submitHandler={profileFormSubmitHandler}/>
+      <h1 className='profile__name'>{`Привет, ${currentUser.name}!`}</h1>
+      <ProfileEditForm apiErrorText={props.apiError}
+        handleLogout={props.handleLogout} submitHandler={props.submitHandler} />
     </main>
   );
 }

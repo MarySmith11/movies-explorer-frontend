@@ -1,5 +1,5 @@
 .auth-section {
-    min-width: 396px;
+    width: 396px;
     margin: 0 auto;
     padding-top: 70px;
 }
@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 500px) {
     .auth-section {
-        min-width: auto;
+        width: auto;
         padding-top: 56px;
     }
 
