@@ -1,5 +1,10 @@
-# movies-explorer-frontend
+# Дипломный проект
 
-Ссылка на макет - https://disk.yandex.ru/d/eVRGWKWrvSXeVQ
-Ссылка на функциональную версию react https://marydiploma.nomoredomains.icu
-Ссылка на pull request - https://github.com/MarySmith11/movies-explorer-frontend/pulls
+**_Описание проекта_**
+На главной странице предсталены этапы написания дипломной работы.Реализован личный кабинет для каждого пользователя с поиском фильмов и их сохранением.
+
+Ссылка на макет - https://disk.yandex.ru/d/eVRGWKWrvSXeVQ.  
+Ссылка на функциональную версию react https://marydiploma.nomoredomains.icu.  
+
+
+**_Статус проекта_** завершен.
